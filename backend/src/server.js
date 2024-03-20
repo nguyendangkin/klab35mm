@@ -1,15 +1,18 @@
 require("dotenv").config();
 import express from "express";
 import cors from "cors";
-import cookieParser from "cookie-parser";
+import apiRoutes from "./routes/apiRoutes";
 
 const app = express();
 
 const port = process.env.PORT;
 
+apiRoutes(app);
+
 app.use(cors());
-app.get("/", (req, res) => {
-    res.send("Hello World!");
+
+app.use((req, res) => {
+    res.send("404 not found");
 });
 
 app.listen(port, () => {

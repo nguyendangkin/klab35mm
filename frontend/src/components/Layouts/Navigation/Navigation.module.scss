@@ -1,3 +1,11 @@
-.custom-class::after {
-    content: none;
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px;
+    color: var(--bs-nav-link-color);
+
+    ::after {
+        display: none;
+    }
 }

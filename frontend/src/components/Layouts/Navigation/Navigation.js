@@ -5,7 +5,6 @@ import {
     Form,
     FormControl,
     Button,
-    NavLink,
     NavDropdown,
 } from "react-bootstrap";
 import classNames from "classnames/bind";
@@ -18,8 +17,8 @@ const Navigation = () => {
     return (
         <div className={cx("wrapper")}>
             <Navbar expand="lg" bg="body-tertiary">
-                <Container fluid>
-                    <Navbar.Brand className="px-5 ">
+                <Container>
+                    <Navbar.Brand className="">
                         <Nav.Link
                             as={Link}
                             to="/"
@@ -43,38 +42,53 @@ const Navigation = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link to="/about" as={Link}>
-                                    NavLink 2 content
+                                <Nav.Link to="/washandscan" as={Link}>
+                                    Trán & Scan Film
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link>NavLink 3 content</Nav.Link>
+                                <Nav.Link to="/printphotos" as={Link}>
+                                    In Ảnh
+                                </Nav.Link>
                             </Nav.Item>
-                            <NavDropdown title="Dropdown" id="nav-dropdown">
-                                <NavDropdown.Item eventKey="4.1">
-                                    Action
+                            <Nav.Item>
+                                <Nav.Link to="/buyfilm" as={Link}>
+                                    Mua Film
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link to="/shipfilmtolab" as={Link}>
+                                    Gửi Film Đến Lab
+                                </Nav.Link>
+                            </Nav.Item>
+                            <NavDropdown title="Xem Thêm" id="nav-dropdown">
+                                <NavDropdown.Item as={Link} to="/contact">
+                                    Liên Hệ
                                 </NavDropdown.Item>
-                                <NavDropdown.Item eventKey="4.2">
-                                    Another action
+                                <NavDropdown.Item as={Link} to="/quesandans">
+                                    Hỏi Đáp
                                 </NavDropdown.Item>
-                                <NavDropdown.Item eventKey="4.3">
-                                    Something else here
+                                <NavDropdown.Item
+                                    as={Link}
+                                    to="/addressfixcameras"
+                                >
+                                    Các Địa Chỉ Sửa Máy Film
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item eventKey="4.4">
-                                    Separated link
+                                <NavDropdown.Item as={Link} to="/login">
+                                    Đăng Nhập
                                 </NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Form className="d-flex">
                             <FormControl
                                 type="search"
-                                placeholder="Loại mã TF, MF, GF"
-                                className="me-2 rounded-0"
+                                placeholder="Nhập Mã TF, MF, GF"
+                                className="me-2 rounded-0 border-success"
                                 aria-label=""
                             />
-                            <Button variant="outline-light rounded-0 text-nowrap">
-                                Kiểm tra tình trạng
+                            <Button variant="outline-success rounded-0 text-nowrap">
+                                Kiểm Tra Tình Trạng Đơn
                             </Button>
                         </Form>
                     </Navbar.Collapse>
