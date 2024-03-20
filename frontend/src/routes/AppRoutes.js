@@ -9,6 +9,7 @@ import Contact from "../pages/publicPages/Contact/Contact";
 import AddressFixCameras from "../pages/publicPages/AddressFixCameras/AddressFixCameras";
 import Login from "../pages/publicPages/Login/Login";
 import PageNotFound from "../pages/publicPages/PageNotFound/PageNotFound";
+import Register from "../pages/publicPages/Register/Register";
 
 const AppRoutes = () => {
     return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
             <Route path="/quesandans" element={<About />} />
             <Route path="/addressfixcameras" element={<AddressFixCameras />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             {/* private route */}
 
             {/* page not found */}

@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import style from "./Login.module.scss";
 import Image from "react-bootstrap/Image";
 import photo from "./../../../assets/images/loginPage/lensmcrokkor55mmf1.7.webp";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(style);
 
@@ -29,12 +30,18 @@ const Login = () => {
                 <Button variant="success" className="col-12 rounded-0">
                     Đăng nhập
                 </Button>
+                <div className="fw-medium pt-3 float-end">
+                    <Link to="/register">Chưa có tài khoản? Đi Đăng kí!</Link>
+                </div>
             </div>
             <div className={cx("col-6")}>
                 <Image src={photo} thumbnail />
                 <figure className="text-center">
                     <blockquote className="blockquote">
-                        <p>Use Film to honor natural beauty.</p>
+                        <p>
+                            Using film photographs to honor the beauty of
+                            nature.
+                        </p>
                     </blockquote>
                     <figcaption className="blockquote-footer">
                         mologophi{" - "}
